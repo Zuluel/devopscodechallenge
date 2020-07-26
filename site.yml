@@ -1,0 +1,16 @@
+---
+- name: Hardening all the common configuration to all hosts server
+  hosts: all
+  remote_user: admin
+  become: true
+
+  roles:
+  - common
+
+- name: Run the Docker-Wordpress configuration
+  hosts: target
+  remote_user: admin
+  become: true
+
+  roles:
+  - docker

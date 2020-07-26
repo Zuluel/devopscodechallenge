@@ -1,0 +1,6 @@
+[target]
+172.16.0.14
+
+[target:vars]
+ansible_use=admin
+ansible_ssh_private_key_file=/home/admin/devopscodechallenge/MySingaporeKey.pem

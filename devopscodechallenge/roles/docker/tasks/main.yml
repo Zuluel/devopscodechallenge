@@ -1,0 +1,9 @@
+---
+# tasks file for docke
+- name: Install Docker-py
+  pip:
+    name: docker-py
+
+- include: installdocker.yml
+- include: dockerwordpress.yml
+

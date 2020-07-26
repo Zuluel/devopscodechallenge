@@ -1,0 +1,20 @@
+---
+- name: Add specified repository into sources list.
+  apt_repository:
+     repo: deb http://security.debian.org/debian-security buster/updates main contrib non-free
+     state: present
+
+- name: Upgrade all packages to the latest version
+  apt:
+    name: "*"
+    state: latest
+
+- name: install Python bindings for SELinux
+  apt: 
+    name: [python-selinux, python-semanage]
+    state: present
+
+- name: Install SELinux
+  apt:
+    name: [selinux-basics, selinux-policy-default, auditd]
+    state: present

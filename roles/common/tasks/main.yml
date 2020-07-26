@@ -1,0 +1,11 @@
+---
+# tasks file for common
+- name: Install PIP
+  apt:
+    name: python-pip
+
+- name: Install PIP Requests
+  pip:
+    name: requests
+
+- include: hardening.yml
